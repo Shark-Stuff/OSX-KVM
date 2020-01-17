@@ -28,7 +28,7 @@ qemu-system-x86_64 -enable-kvm -m 3072 -cpu Penryn,kvm=on,vendor=GenuineIntel,+i
 	  -drive id=Clover,if=none,snapshot=on,format=qcow2,file=./'Catalina/CloverNG.qcow2' \
 	  -device ide-hd,bus=sata.2,drive=Clover \
 	  -device ide-hd,bus=sata.3,drive=InstallMedia \
-	  -drive id=InstallMedia,if=none,file=dummy.img,format=raw \
+	  -drive id=InstallMedia,if=none,file=BaseSystem.img,format=raw \
 	  -drive id=MacHDD,if=none,file=./HighSierra/Clover.qcow2,format=qcow2 \
 	  -device ide-hd,bus=sata.4,drive=MacHDD \
 	  -netdev tap,id=net0,ifname=tap0,script=no,downscript=no -device vmxnet3,netdev=net0,id=net0,mac=52:54:00:c9:18:27 \
